@@ -1,11 +1,6 @@
 #!/bin/bash
 
-LIST=`git submodule | awk '{ print $2 }'`
-BASE=`pwd`
 
-for name in $LIST
-do
-	#echo "test $name"
-	echo "updating $name"
-	cd "$name" && git pull && cd "$BASE"
-done
+git submodule foreach git fetch
+git submodule foreach git checkout origin/master
+git submodule update --init --recursive

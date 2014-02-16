@@ -7,7 +7,7 @@ exports.admin_super = "googol"; // gets a pm when there is an error
 exports.channels = [ "#matthewfl", "##balanced", "#balanced" ];
 
 
-exports.save_file = "/tmp/brain-dump.json"
+exports.save_file = "/home/matthew/balanced/brain-dump.json"
 exports.save_inveral = 5 * 1000; // 5 seconds
 
 
@@ -21,4 +21,4 @@ exports.faq_path = [ "resources/balanced-docs/faq/Developer Support/Developer FA
 
 exports.api_path = [ "resources/balanced-docs/spec/src/resources" ];
 
-exports.log_file = "/tmp/irc-log.json2"
+exports.log_file = "/home/matthew/balanced/irc-log.json2"
