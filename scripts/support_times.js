@@ -5,18 +5,19 @@ var help_message = "fyi: This channel is manned Monday through Friday 9 to 7 PST
 module.exports = function(act) {
     var timer = null;
     act.on_message(function(msg, reply) {
-	if(match_words.exec(msg.join(' '))) {
-	    var day = (new Date).getDay();
-	    var hour = (new Date).getHours();
-	    if(!(day == 6 || day == 0 || hour < 9 || hour >= 19)) return; // this channel should be manned
-	    if(timer) return;
-	    timer = setTimeout(function () {
-		reply(true, help_message);
-		timer = null;
-	    }, 90 * 1000);
-	}else{
-	    if(timer)
-		clearTimeout(timer);
-	}
+        if(match_words.exec(msg.join(' '))) {
+            var day = (new Date).getDay();
+            var hour = (new Date).getHours();
+            if(!(day == 6 || day == 0 || hour < 9 || hour >= 19)) return; // this channel should be manned
+            if(timer) return;
+						console.log('Setting timer for support message');
+            timer = setTimeout(function () {
+                reply(true, help_message);
+                timer = null;
+            }, 180 * 1000);
+        }else{
+            if(timer)
+                clearTimeout(timer);
+        }
     });
 };
