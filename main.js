@@ -33,10 +33,10 @@ var file_commands = {};
 
 var admin_commands = {
     "add-admin": function(msg, reply) {
-	if(brain.admins.indexOf(msg[0]) != -1) {
+	if(brain.admins.indexOf(msg[1]) != -1) {
 	    reply(true, "Admin already on the list");
 	}
-	brain.admins.push(msg[0]);
+	brain.admins.push(msg[1]);
     },
     "delete-admin": function(msg, reply) {
 	if(msg[0] == config.admin_super) {

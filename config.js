@@ -21,4 +21,4 @@ exports.faq_path = [ "resources/balanced-docs/faq/Developer Support/Developer FA
 
 exports.api_path = [ "resources/balanced-docs/spec/src/resources" ];
 
-exports.log_file = "/tmp/irc-log.json2"
+exports.log_file = "/home/matthew/balanced/irc-log.json2"
